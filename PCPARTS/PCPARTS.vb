@@ -118,9 +118,7 @@ Public Class Form1
                 'strOutput = strOutput.Replace("&nbsp", " ")
 
                 '///TEXTBOX PRICE , DESCRIPTION and LOCATION
-                'txtFormatted.Text = txtFormatted.Text + vbNewLine + ($"Price = ${sData} ") & ($"Description = {sData2} ") & ($"Location = {sData3}") 'write Formatted Output To Separate TB
-                txtFormatted.Text = txtFormatted.Text & vbNewLine & "Price = $" & sData & ",  Description = " & sData2 & ",   Location = " & sData3 'write Formatted Output To Separate TB
-
+                RichTextBox1.Text = RichTextBox1.Text & vbNewLine & "<strong> Price = $</strong>" & sData & ",  Description = " & sData2 & ",   Location = " & sData3 'write Formatted Output To Separate TB
             Next
         Catch ex As Exception
 
@@ -145,7 +143,7 @@ Public Class Form1
     End Function
 
     Private Sub btnExtract_Click(sender As Object, e As EventArgs) Handles btnExtract.Click
-        txtFormatted.Text = ""
+        'txtFormatted.Text = ""
         Scrape() 'Scrape Text From URL
 
     End Sub
@@ -169,6 +167,10 @@ Public Class Form1
     End Sub
 
     Private Sub txtSearchText_TextChanged(sender As Object, e As EventArgs) Handles txtSearchText.TextChanged
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

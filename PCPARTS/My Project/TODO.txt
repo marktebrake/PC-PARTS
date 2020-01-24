@@ -1,0 +1,22 @@
+Rich Text Box vs text box? - required for URL?
+URL attached to each Line
+task list attached to solution?
+Version
+
+
+
+
+
+
+
+
+
+
+
+Premium Features - sellable product? How to protect?
+ebay search included
+image scraper / auto find for each line
+check for updates option - link to GIT
+
+min/max price filter
+export options - csv and/or table

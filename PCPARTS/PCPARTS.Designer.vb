@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtScrape = New System.Windows.Forms.TextBox()
-        Me.txtFormatted = New System.Windows.Forms.TextBox()
         Me.btnExtract = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.txtSearchText = New System.Windows.Forms.TextBox()
@@ -34,6 +33,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.nudHowMany = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudHowMany, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,18 +46,6 @@ Partial Class Form1
         Me.txtScrape.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtScrape.Size = New System.Drawing.Size(202, 117)
         Me.txtScrape.TabIndex = 0
-        '
-        'txtFormatted
-        '
-        Me.txtFormatted.BackColor = System.Drawing.Color.Black
-        Me.txtFormatted.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFormatted.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtFormatted.Location = New System.Drawing.Point(12, 291)
-        Me.txtFormatted.Multiline = True
-        Me.txtFormatted.Name = "txtFormatted"
-        Me.txtFormatted.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtFormatted.Size = New System.Drawing.Size(1206, 325)
-        Me.txtFormatted.TabIndex = 1
         '
         'btnExtract
         '
@@ -146,6 +134,17 @@ Partial Class Form1
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Return this many results:"
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.MenuText
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.SystemColors.Window
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 291)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(1206, 355)
+        Me.RichTextBox1.TabIndex = 11
+        Me.RichTextBox1.Text = ""
+        '
         'Form1
         '
         Me.AcceptButton = Me.btnExtract
@@ -155,10 +154,10 @@ Partial Class Form1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(1230, 658)
+        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.nudHowMany)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.txtFormatted)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -176,7 +175,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents txtScrape As TextBox
-    Friend WithEvents txtFormatted As TextBox
     Friend WithEvents btnExtract As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents txtSearchText As TextBox
@@ -186,4 +184,5 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents nudHowMany As NumericUpDown
     Friend WithEvents Label3 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
